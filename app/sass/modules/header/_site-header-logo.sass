@@ -1,0 +1,26 @@
+.site-header-logo
+  width: 100%
+  text-align: center
+  z-index: 5
+
+  &-name,
+  &-last-name
+    margin: 0 -45px 0 -45px
+    font-size: $site-header-logo-sz
+    color: $site-header-logo-title-clr
+
+  &-icon
+    width: 5em
+    height: 5em
+
+    &:nth-child(1)
+      transform: translate(47px, 0)
+      animation: logo-one-anim 5s infinite ease-in
+
+    &:nth-child(2)
+      transform: translate(0, 45px)
+      animation: logo-two-anim 5s infinite ease-in
+
+    &:nth-child(3)
+      transform: translate(-47px, 0)
+      animation: logo-three-anim 5s infinite ease-in

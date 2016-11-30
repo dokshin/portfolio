@@ -1,0 +1,35 @@
+%wrapper
+    @extend %row
+    margin: 0 auto
+    
+    
+//RESPOND-TO
+
+//large
+@include respond-to($large)
+    %wrapper
+        max-width: 950px
+    
+
+//medium
+@include respond-to($medium)
+    %wrapper
+        max-width: 750px
+   
+ 
+//small
+@include respond-to($small)
+    %wrapper
+        max-width: 550px
+    
+
+//extra-small
+@include respond-to($extra-small)
+     %wrapper
+        max-width: 400px
+    
+
+//mob
+@include respond-to($mob)
+    %wrapper
+        max-width: 300px

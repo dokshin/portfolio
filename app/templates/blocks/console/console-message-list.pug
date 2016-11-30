@@ -1,0 +1,75 @@
+.console-message-list
+    .console-message-welcom-item
+        span.console-message-title='System:'
+        p.console-message-welcom-text='Список команд:'
+                            
+    .console-message-welcom-item
+        p.console-message-welcom-text='Системные'
+                            
+    .console-message-welcom-item
+        +console-message-list([{
+             name : 'list - Получить список команд'
+        },
+        {
+            name : 'clear - Очистить консоль'
+        },
+        {
+            name : 'folio-code - Исходный код портфолио'
+        }
+        ])
+                        
+    .console-message-welcom-item
+        p.console-message-welcom-text='Навыки'
+                     
+    .console-message-welcom-item
+        +console-message-list([{
+            name : 'html'
+        },
+        {
+            name : 'pug'
+        },
+        {
+            name : 'css'
+        },
+        {
+            name : 'flexbox'
+        },
+        {
+            name : 'sass'
+        },
+        {
+            name : 'smacss'
+        },
+        {
+            name : 'js'
+        },
+        {
+            name : 'jquery'
+        },
+        {
+            name : 'gulp'
+        },
+        {
+            name : 'git'
+        },
+        {
+            name : 'english'
+        }
+        ])
+                        
+    .console-message-welcom-item
+        p.console-message-welcom-text='Другие данные'
+                            
+    .console-message-welcom-item
+        +console-message-list([{
+            name : 'experience'
+        },
+        {
+            name : 'education'
+        },
+        {
+            name : 'age'
+        }
+
+        ])
+                        

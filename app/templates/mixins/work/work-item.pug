@@ -1,0 +1,10 @@
+mixin work-item(items)
+  each item, i in items
+    .work-item
+      +icon(item.iconName, 'work-item-icon')
+      .work-item-box
+        h3.work-item-title=item.title
+        a.work-item-link(href=item.eyeLink)
+          +icon('work-eye', 'work-item-social-icon')
+        a.work-item-link(href=item.githubLink)
+          +icon('work-github', 'work-item-social-icon')

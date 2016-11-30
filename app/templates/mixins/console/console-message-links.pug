@@ -1,0 +1,6 @@
+mixin console-message-links(items)
+    each item, i in items
+        div(class='console-message-' + item.name)
+            .console-message-hidden-item
+                span.console-message-title='System:'
+                a.console-message-links-text(href=item.link target='_blank')=item.text

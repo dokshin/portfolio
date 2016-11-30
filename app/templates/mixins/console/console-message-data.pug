@@ -1,0 +1,6 @@
+mixin console-message-data(items)
+    each item, i in items
+        div(class='console-message-data-' + item.name + ' console-message-data-item')
+            .console-message-hidden-item
+                span.console-message-title='System:'
+                p.console-message-hidden-text=item.text

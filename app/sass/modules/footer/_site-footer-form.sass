@@ -1,0 +1,44 @@
+.site-footer-form
+  display: flex
+  width: 50%
+  margin: 0 auto
+
+  &-input
+    display: inline-block
+    width: 100%
+    padding: 5px 10px
+    border: none
+    border: 1px solid $site-footer-form-input-border-clr
+    border-bottom: none
+    background: none
+
+  &-menu-icon
+    width: 2em
+    height: 2em
+    margin-left: 5px
+    cursor: pointer
+
+
+
+//RESPOND-TO
+
+//medium
+@include respond-to($medium)
+  .site-footer-form
+    width: 60%
+
+
+//small
+@include respond-to($small)
+  .site-footer-form
+    width: 70%
+
+
+//extra-small
+@include respond-to($extra-small)
+  .site-footer-form
+    width: 95%
+
+
+//mob
+@include respond-to($mob)

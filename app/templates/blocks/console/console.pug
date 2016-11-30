@@ -1,0 +1,28 @@
+.console
+    .console-message
+        .console-message-wrapper
+        
+            .console-message-system
+                include console-message-welcom   
+                 
+                
+            .console-message-hidden
+                include console-message-list
+                include console-message-data
+                include console-message-links
+            
+                .console-message-user
+                    .console-message-user-item
+                        span.console-message-title='User:'
+                        p.console-message-user-text
+                        
+                .console-message-warning
+                    .console-message-hidden-item
+                        p.console-message-warning-text='Ошибка! Введите команду снова.'
+            
+            .console-message-new
+            
+    form.console-form
+        hr.console-form-area-border
+        textarea.console-form-area(autofocus)
+            

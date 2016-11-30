@@ -1,0 +1,9 @@
+mixin console-message-work-page-layout(items)
+  each item, i in items
+    .console-message-hidden-item
+        i.console-message-circle-list
+        span.console-message-work-item-title=item.title + ':'
+        a.console-message-links-text(href=item.pageLink target='_blank').
+          Посмотреть работу
+        a.console-message-links-text(href=item.codeLink target='_blank').
+          Исходный код

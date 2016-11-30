@@ -1,0 +1,25 @@
+extends ../layouts/_default
+
+block vars
+    -
+        var lang =     'ru',
+            title =    'Докшин Даниил - Front-end developer',
+            style =    'css/index.css'
+            bodyName = 'index'
+
+block append link
+    // build:css css/index.css
+    link(rel="stylesheet" href=style)
+    // endbuild
+
+block header
+  include ../partials/header
+
+block main
+  
+
+block footer
+  include ../partials/footer
+
+block append script
+    // endbuild

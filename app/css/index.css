@@ -1,0 +1,366 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto Condensed";
+  transition: 1s all; }
+
+html,
+body {
+  height: 100%; }
+
+body {
+  display: flex;
+  flex-flow: wrap row;
+  align-items: stretch;
+  overflow-x: hidden; }
+
+section,
+main {
+  width: 100%; }
+
+a {
+  text-decoration: none;
+  color: black; }
+
+img {
+  width: 100%; }
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none !important; }
+
+@font-face {
+  font-family: "Roboto Condensed";
+  font-style: sans-serif;
+  font-weight: 100;
+  src: url("/fonts/RobotoCondensed-Regular.ttf") format("truetype"); }
+
+/*
+Flex Grid Framework
+Platform: Sass (.scss)
+
+Original repository:
+https://github.com/afonsopacifer/flex-grid-framework
+Website:
+http://flexgridframework.com/
+Author:
+Afonso Pacifer (afonsopacifer.com)
+Version: 1.3.1
+Licence:
+MIT - https://github.com/afonsopacifer/flex-grid-framework/blob/master/licence.md
+* /
+
+/* Configs
+------------------------------------------------*/
+/* Row
+------------------------------------------------*/
+.wrapper-site-header, .wrapper-footer {
+  margin-left: 0;
+  margin-right: 0;
+  max-width: 1200px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  box-sizing: border-box; }
+
+/* Columns
+------------------------------------------------*/
+/* Offset
+------------------------------------------------*/
+/* Flex Container
+------------------------------------------------*/
+/* Flex Itens
+------------------------------------------------*/
+.wrapper-site-header, .wrapper-footer {
+  margin: 0 auto; }
+
+@media only screen and (max-width: 1199px) {
+  .wrapper-site-header, .wrapper-footer {
+    max-width: 950px; } }
+
+@media only screen and (max-width: 991px) {
+  .wrapper-site-header, .wrapper-footer {
+    max-width: 750px; } }
+
+@media only screen and (max-width: 767px) {
+  .wrapper-site-header, .wrapper-footer {
+    max-width: 550px; } }
+
+@media only screen and (max-width: 479px) {
+  .wrapper-site-header, .wrapper-footer {
+    max-width: 400px; } }
+
+@media only screen and (max-width: 319px) {
+  .wrapper-site-header, .wrapper-footer {
+    max-width: 300px; } }
+
+.interactive {
+  display: none; }
+
+@keyframes interactive {
+  0% {
+    opacity: 0; }
+  20% {
+    opacity: 0.5; }
+  40% {
+    opacity: 0; }
+  60% {
+    opacity: 0.5; }
+  80% {
+    opacity: 0; }
+  100% {
+    opacity: 0.5; } }
+
+.site-header {
+  position: absolute;
+  top: 35%;
+  width: 100%; }
+
+.work {
+  margin-bottom: -1.8em; }
+
+.technology {
+  position: relative;
+  overflow: hidden; }
+
+.site-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%; }
+
+.site-header-logo {
+  width: 100%;
+  text-align: center;
+  z-index: 5; }
+  .site-header-logo-name, .site-header-logo-last-name {
+    margin: 0 -45px 0 -45px;
+    font-size: 1.5em;
+    color: #381239; }
+  .site-header-logo-icon {
+    width: 5em;
+    height: 5em; }
+    .site-header-logo-icon:nth-child(1) {
+      transform: translate(47px, 0);
+      animation: logo-one-anim 5s infinite ease-in; }
+    .site-header-logo-icon:nth-child(2) {
+      transform: translate(0, 45px);
+      animation: logo-two-anim 5s infinite ease-in; }
+    .site-header-logo-icon:nth-child(3) {
+      transform: translate(-47px, 0);
+      animation: logo-three-anim 5s infinite ease-in; }
+
+@keyframes logo-one-anim {
+  0% {
+    transform: translate(47px, 0) rotate(-30deg); }
+  16% {
+    transform: translate(115px, 0) rotate(30deg); }
+  32% {
+    transform: translate(80px, 45px) rotate(-30deg); }
+  48% {
+    transform: translate(47px, 0) rotate(30deg); }
+  64% {
+    transform: translate(115px, 0) rotate(-30deg); }
+  80% {
+    transform: translate(80px, 45px) rotate(30deg); }
+  100% {
+    transform: translate(47px, 0) rotate(-30deg); } }
+
+@keyframes logo-two-anim {
+  0% {
+    transform: translate(0, 45px) rotate(30deg); }
+  16% {
+    transform: translate(0, 45px) rotate(-30deg); }
+  32% {
+    transform: translate(30px, 0) rotate(30deg); }
+  48% {
+    transform: translate(30px, 0) rotate(-30deg); }
+  64% {
+    transform: translate(-30px, 0) rotate(30deg); }
+  80% {
+    transform: translate(-30px, 0) rotate(-30deg); }
+  100% {
+    transform: translate(0, 45px) rotate(30deg); } }
+
+@keyframes logo-three-anim {
+  0% {
+    transform: translate(-47px, 0) rotate(-30deg); }
+  16% {
+    transform: translate(-115px, 0) rotate(30deg); }
+  32% {
+    transform: translate(-115px, 0) rotate(-30deg); }
+  48% {
+    transform: translate(-80px, 45px) rotate(30deg); }
+  64% {
+    transform: translate(-80px, 45px) rotate(-30deg); }
+  80% {
+    transform: translate(-47px, 0) rotate(30deg); }
+  100% {
+    transform: translate(-47px, 0) rotate(-30deg); } }
+
+.work-platform {
+  position: relative;
+  width: 100%;
+  height: 14em;
+  margin-bottom: -5.5em;
+  z-index: 50;
+  animation: work-platform 5s infinite; }
+
+.work-item {
+  position: relative;
+  width: 15em;
+  margin: -1.8em auto 0 auto; }
+  .work-item:nth-child(1) {
+    transform: translate(7em, 2em) rotate(-70deg);
+    animation: work-item-one 10s infinite 1.4s; }
+  .work-item:nth-child(2) {
+    transform: translate(7em, 1.5em) rotate(70deg);
+    animation: work-item-two 10s infinite 1.4s; }
+  .work-item-icon {
+    width: 100%;
+    height: 15em; }
+  .work-item-social-icon {
+    width: 1.5em;
+    height: 1.5em;
+    margin: 0 5px; }
+  .work-item-box {
+    position: absolute;
+    padding: 10px 15px 2px 15px;
+    font-size: 1.4em;
+    text-align: center;
+    border-radius: 1000px; }
+
+.work-item:nth-child(1) .work-item-box {
+  top: 30%;
+  left: 20%;
+  color: #96d471;
+  background: #381239; }
+
+.work-item:nth-child(1) .work-item-box .work-item-social-icon {
+  fill: #96d471; }
+
+.work-item:nth-child(2) .work-item-box {
+  top: 32.5%;
+  left: 15%;
+  color: #cd8a91;
+  background: #441c34; }
+
+.work-item:nth-child(2) .work-item-box .work-item-social-icon {
+  fill: #cd8a91; }
+
+@keyframes work-item-one {
+  0% {
+    transform: translate(7em, 2em) rotate(-70deg); }
+  50% {
+    transform: translate(-7em, 2em) rotate(70deg); }
+  100% {
+    transform: translate(7em, 2em) rotate(-70deg); } }
+
+@keyframes work-item-two {
+  0% {
+    transform: translate(7em, 1.5em) rotate(70deg); }
+  50% {
+    transform: translate(-7em, 1.5em) rotate(-70deg); }
+  100% {
+    transform: translate(7em, 1.5em) rotate(70deg); } }
+
+.technology-platform {
+  position: absolute;
+  top: 5%;
+  width: 100%;
+  text-align: center;
+  z-index: 1;
+  transform: rotate(10deg);
+  animation: technology-elem 10s infinite 1s; }
+  .technology-platform-icon {
+    width: 22em;
+    height: 22em; }
+
+.technology-circle {
+  width: 7em;
+  height: 4em;
+  margin: 0 auto;
+  padding-top: 2.8em;
+  text-align: center;
+  background: #dddddd;
+  border-radius: 1000px;
+  box-shadow: 0 0 10px 5px #dddddd;
+  animation: technology-elem 10s infinite; }
+
+.technology-item {
+  position: relative;
+  width: 10em;
+  margin: 1em auto;
+  padding: 1em 1em 0.5em 1em;
+  text-align: center;
+  z-index: 10; }
+  .technology-item-title {
+    display: inline-block;
+    color: #dddddd;
+    transform: rotate(10deg) translateX(1.5em);
+    animation: technology-elem-title 10s infinite 1s; }
+
+@keyframes technology-elem {
+  0% {
+    transform: rotate(10deg); }
+  50% {
+    transform: rotate(-10deg); }
+  100% {
+    transform: rotate(10deg); } }
+
+@keyframes technology-elem-title {
+  0% {
+    transform: rotate(15deg) translateX(1.5em); }
+  50% {
+    transform: rotate(-15deg) translateX(-1.5em); }
+  100% {
+    transform: rotate(15deg) translateX(1.5em); } }
+
+.site-footer-form {
+  display: flex;
+  width: 50%;
+  margin: 0 auto; }
+  .site-footer-form-input {
+    display: inline-block;
+    width: 100%;
+    padding: 5px 10px;
+    border: none;
+    border: 1px solid #381239;
+    border-bottom: none;
+    background: none; }
+  .site-footer-form-menu-icon {
+    width: 2em;
+    height: 2em;
+    margin-left: 5px;
+    cursor: pointer; }
+
+@media only screen and (max-width: 991px) {
+  .site-footer-form {
+    width: 60%; } }
+
+@media only screen and (max-width: 767px) {
+  .site-footer-form {
+    width: 70%; } }
+
+@media only screen and (max-width: 479px) {
+  .site-footer-form {
+    width: 95%; } }
+
+.visible {
+  display: block; }
+
+.hidden {
+  display: none; }
+
+.site-header-button-visible {
+  transform: translateY(-25px) !important; }
+
+.interactive-visible {
+  display: block;
+  animation: interactive 4s; }

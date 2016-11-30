@@ -1,0 +1,8 @@
+mixin navbar (items, clss)
+    nav(class=clss + '-navbar')
+        div(class=clss + '-navbar-mob')
+            +icon('burger', clss + '-navbar-icon')
+            p(class=clss + '-navbar-icon-text')= "MENU"
+        each item, i in items
+            a(class=clss + "-navbar-item"
+              href=item.link)=item.name

@@ -1,0 +1,78 @@
+.console
+
+    &-form
+        width: 100%
+        height: 1.1em
+
+        &-area
+            width: 90%
+            height: 1.1em
+            padding: 0.7em 1.35em
+            font-size: 0.8em
+            border: none
+            color: $console-area-clr
+            background: none
+            resize: none
+            overflow: hidden
+
+        &-area-border
+            width: 100%
+            margin: 0 auto
+            color: black
+            border-radius: 10px
+
+    &-message
+        display: none
+        margin-left: 1.1em
+        overflow-y: scroll
+        animation: console-message-loading 0s linear
+
+        &-wrapper
+            width: 47.5%
+            word-wrap: break-word
+
+        &-title
+            float: left
+            margin-right: 5px
+            color: $console-message-title
+
+        &-work-title
+          margin: 5px 0 0 22px
+
+        &-work-item-title
+          margin-right: 10px
+
+        &-welcom-item
+            @extend %message-item
+
+        &-welcom-text
+            color: $console-text-clr
+
+        &-circle-list
+            float: left
+            width: 5px
+            height: 5px
+            margin: 0.489em 0.5em 0 1em
+            border: 1px solid $console-message-circle-list-border-clr
+            border-radius: 10px
+            box-shadow: 0 0 5px $console-message-circle-list-shadow-clr
+
+        &-hidden
+            display: none
+
+        &-hidden-item
+            @extend %message-item
+
+        &-hidden-text
+            color: $console-text-clr
+
+        &-user-item
+            @extend %message-item
+
+        &-links-text
+            margin-right: 10px
+            text-decoration: underline
+            color: $console-message-links-clr
+
+        &-warning-text
+            color: $console-message-warning-clr

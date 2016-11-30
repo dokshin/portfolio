@@ -1,0 +1,4 @@
+mixin social(items, name)
+    div(class=name + '-social')
+        each item, i in items
+            a(class=name + '-social-link' href="#"): +icon(item.iconName,  name + '-social-icon')
